@@ -1,0 +1,93 @@
+﻿/*Include Files*/
+/*Variable Declarations*/
+/*Fonts*/
+/*Variable Declarations*/
+/*Fonts*/
+.button-border {
+  border: solid 1px black; }
+
+img:hover {
+  opacity: .7;
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.table-style {
+  height: 261px;
+  border-top: 2px solid #dddddd;
+  overflow: auto; }
+
+.makeBlock {
+  display: block;
+  text-align: center; }
+
+#FitBitNavTabs li.active a {
+  border-radius: 10px 10px 0 0;
+  background-color: #EEE;
+  color: #333; }
+
+#FitBitNavTabs a {
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px 10px 0 0;
+  background-color: #4e3691;
+  color: #FFF; }
+
+#FitBitNavTabs a:hover {
+  background-color: #1f153a;
+  border: 1px #e3e3e3 solid; }
+
+#distanceInfoTabs li.active a {
+  border-radius: 10px 10px 0 0;
+  background-color: #EEE;
+  color: #333; }
+
+#distanceInfoTabs a {
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px 10px 0 0;
+  background-color: #4e3691;
+  color: #FFF; }
+
+#distanceInfoTabs a:hover {
+  background-color: #1f153a;
+  border: 1px #e3e3e3 solid; }
+
+#stepsInfoTabs li.active a {
+  border-radius: 10px 10px 0 0;
+  background-color: #EEE;
+  color: #333; }
+
+#stepsInfoTabs a {
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px 10px 0 0;
+  background-color: #4e3691;
+  color: #FFF; }
+
+#stepsInfoTabs a:hover {
+  background-color: #1f153a;
+  border: 1px #e3e3e3 solid; }
+
+#minutesInfoTabs li.active a {
+  border-radius: 10px 10px 0 0;
+  background-color: #EEE;
+  color: #333; }
+
+#minutesInfoTabs a {
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px 10px 0 0;
+  background-color: #4e3691;
+  color: #FFF; }
+
+#minutesInfoTabs a:hover {
+  background-color: #1f153a;
+  border: 1px #e3e3e3 solid; }
+
+.outerFolder {
+  padding: 20px 0; }
+
+.innerFolder {
+  padding-bottom: 20px;
+  max-height: 323px;
+  overflow: auto; }
+

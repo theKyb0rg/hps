@@ -1,0 +1,875 @@
+Date: 3/21/2016 8:51:33 PM
+File Name: FileManager.aspx.cs
+Method: Page_Load
+Error: System.OutOfMemoryException: Insufficient memory to continue the execution of the program.
+Additional Information: User blah blah blah done messed up
+
+Date: 3/22/2016 4:31:45 AM
+File Name: FitBitManager.aspx.cs
+Method: UploadMinutesData
+Error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at HPFS.FitBitManager.UploadMinutesData() in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\Pages\FitBitManager.aspx.cs:line 505
+Additional Information: admin tried to upload Minutes Data.
+
+Date: 3/29/2016 8:26:27 PM
+File Name: FitBitManager.aspx.cs
+Method: btnSetNewGoal_Click
+Error: System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at HPFS.FitBitManager.btnSetNewGoal_Click(Object sender, EventArgs e) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\Pages\FitBitManager.aspx.cs:line 482
+Additional Information: admin tried to set a new goal.
+
+Date: 3/29/2016 8:26:41 PM
+File Name: FitBitManager.aspx.cs
+Method: btnSetNewGoal_Click
+Error: System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at HPFS.FitBitManager.btnSetNewGoal_Click(Object sender, EventArgs e) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\Pages\FitBitManager.aspx.cs:line 482
+Additional Information: admin tried to set a new goal.
+
+Date: 3/30/2016 2:38:33 PM
+File Name: FitBitManager.aspx.cs
+Method: btnSetNewGoal_Click
+Error: System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at HPFS.FitBitManager.btnSetNewGoal_Click(Object sender, EventArgs e) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\Pages\FitBitManager.aspx.cs:line 482
+Additional Information: admin tried to set a new goal.
+
+Date: 4/4/2016 12:21:32 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:21:32 AM
+File Name: Activity Tracker
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:21:32 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:21:32 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:21:47 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:21:47 AM
+File Name: Activity Tracker
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:21:47 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:21:47 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:22:16 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:22:16 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:24:06 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:24:07 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:24:48 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:24:48 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/4/2016 12:25:38 AM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/4/2016 12:25:38 AM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/5/2016 4:17:56 PM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/5/2016 4:17:56 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/9/2016 6:58:50 PM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/9/2016 6:58:50 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/9/2016 6:58:50 PM
+File Name: HPFSMaster.Master.cs
+Method: DynamicInformation()
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at HPFS.HPFSMaster.DynamicInformation() in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 343
+Additional Information: Contact info failed to load.
+
+Date: 4/9/2016 7:50:30 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 288
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 7:50:43 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 288
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 7:52:07 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 288
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 7:54:10 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 288
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 8:28:21 PM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/9/2016 8:28:22 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/9/2016 8:28:22 PM
+File Name: HPFSMaster.Master.cs
+Method: DynamicInformation()
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at HPFS.HPFSMaster.DynamicInformation() in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 351
+Additional Information: Contact info failed to load.
+
+Date: 4/9/2016 8:29:29 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Data.Entity.Internal.Validation.ValidationProvider.GetEntityValidator(InternalEntityEntry entityEntry)
+   at System.Data.Entity.Internal.InternalEntityEntry.GetValidationResult(IDictionary`2 items)
+   at System.Data.Entity.DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2 items)
+   at System.Data.Entity.DbContext.GetValidationErrors()
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 20
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/9/2016 8:51:38 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 8:51:55 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 8:53:45 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 8:54:42 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 10:24:05 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 10:24:20 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/9/2016 10:24:45 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/12/2016 4:02:16 PM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/12/2016 4:02:16 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/12/2016 4:02:16 PM
+File Name: HPFSMaster.Master.cs
+Method: DynamicInformation()
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at HPFS.HPFSMaster.DynamicInformation() in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 351
+Additional Information: Contact info failed to load.
+
+Date: 4/12/2016 4:17:11 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 289
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/17/2016 1:56:25 PM
+File Name: HPFSMaster.Master.cs
+Method: Page_Init
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.HPFSMaster.Page_Init(Object sender, EventArgs e) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\HPFSMaster.Master.cs:line 54
+Additional Information: InvalidOperationException
+
+Date: 4/17/2016 1:56:25 PM
+File Name: Home
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 19
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/17/2016 1:56:25 PM
+File Name: HPFSMaster.Master.cs
+Method: DynamicInformation()
+Error: System.InvalidOperationException: The model backing the 'HPSDB' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at HPFS.HPFSMaster.DynamicInformation() in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\HPFSMaster.Master.cs:line 359
+Additional Information: Contact info failed to load.
+
+Date: 4/17/2016 4:26:08 PM
+File Name: HPFSMaster.Master.cs
+Method: btnSaveAdminSettings_Click
+Error: System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at HPFS.HPFSMaster.btnSaveAdminSettings_Click(Object sender, EventArgs e) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HPFSMaster.Master.cs:line 314
+Additional Information: Admin Settings Information failed to update
+
+Date: 4/17/2016 5:19:50 PM
+File Name: Landing Page
+Method: Action Type ID: 2
+Error: System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: AcceptChanges cannot continue because the object's EntityKey value is null or is not a temporary key. This can happen when the EntityKey property is modified while the object is in an added state. ---> System.InvalidOperationException: AcceptChanges cannot continue because the object's EntityKey value is null or is not a temporary key. This can happen when the EntityKey property is modified while the object is in an added state.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.ResetEntityKey(EntityEntry entry, EntityKey value)
+   at System.Data.Entity.Core.Objects.ObjectStateManager.FixupKey(EntityEntry entry)
+   at System.Data.Entity.Core.Objects.EntityEntry.AcceptChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.AcceptAllChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at HPFS.HelperMethods.ActivityTracker.Track(String PageAccessed, Int32 ActionType) in F:\Michael\Niagara\Semester 4\CommunityProject\hps\HPFS\HPFS\HelperMethods\ActivityTracker.cs:line 20
+Additional Information: Activity Log Track Method Failed
+
+Date: 4/17/2016 2:24:31 PM
+File Name: Calendar.asmx.cs
+Method: BuildMobileEvents
+Error: System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at HPFS.WebServices.Calendar.BuildMobileEvents() in C:\Users\kyb0r\Desktop\HPS\HPFS\HPFS\WebServices\Calendar.asmx.cs:line 52
+Additional Information: Error when searching for 'everyone' records to populate mobile calendar modal

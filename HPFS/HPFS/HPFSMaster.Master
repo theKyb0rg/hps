@@ -1,0 +1,764 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HPFSMaster.master.cs" Inherits="HPFS.HPFSMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="The Hamilton Program for Schizophrenia is a comprehensive community-based treatment and rehabilitation program." />
+    <meta name="keywords" content="HPS, HPFS, Hamilton, schizophrenia, help, support, mental health, community, case management, rehabilitation." />
+    <meta name="robots" content="index, follow" />
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server" />
+    </title>
+    <link runat="server" rel="icon" href="~/faviconHPFS.ico" type="image/ico" />
+    <link runat="server" rel="shortcut icon" href="~/faviconHPFS.ico" type="image/x-icon" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
+    <link href="/Content/css/c3.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="/Content/css/Project.min.css" rel="stylesheet" />
+    <link href="/Content/css/mobile.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-sortable.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/notify.js"></script>
+    <script src="/Scripts/jquery.smartmenus.js"></script>
+    <script src="/Scripts/jquery.smartmenus.bootstrap.js"></script>
+    <script src="/Scripts/d3.min.js" charset="utf-8"></script>
+    <script src="/Scripts/c3.min.js"></script>
+    <script src="/Scripts/jquery-ui.js"></script>
+    <script src="/Scripts/Project.js"></script>
+    <script src="/Scripts/bootstrap-sortable.js"></script>
+    <link href="/Vendor/Bootstrap-ColorPicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
+    <script src="/Vendor/Bootstrap-ColorPicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <asp:ContentPlaceHolder ID="insideHead" runat="server" />
+</head>
+<body>
+    <form id="WebsiteForm" runat="server">
+        <asp:ScriptManager ID="ScriptManager" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+        <%-- LEFT NAV--%>
+        <nav class="navbar navbar-default navbar-static-top" id="mainNav" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="logoWrap">
+                    <a href="/Main.aspx">
+                        <img id="hpsLogo" src="/Content/images/hpsLogo.png" height="47" width="80" />
+                    </a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul id="leftNav" class="nav navbar-nav ">
+                    <li class="add-border"><a id="page1" runat="server" href="/Main.aspx">Home</a></li> 
+                    <li class="add-border"><a id="page2" runat="server" href="/Pages/RehabilitationAndTreatment.aspx">Rehabilitation</a></li>
+                    <li class="add-border"><a id="page3" runat="server" href="/Pages/EducationAndResearch.aspx">Education</a></li>
+                    <li class="add-border"><a id="page4" runat="server" href="/Pages/Programs.aspx">Programs</a>
+                    </li>
+                    <li class="add-border">
+                        <a id="page5" runat="server" href="/Pages/ContactUs.aspx">Contact</a>
+                    </li>
+                    <li class="add-border hidden-xs">
+                        <a id="page6" runat="server" href="/Pages/AboutUs.aspx">About&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Content/files/Hamiton-Program-for-Schizophrenia-Inc.-M-SAA-CMHA-final-Feb171.pdf" target="_blank">MSAA</a></li>
+                        </ul>
+                    </li>
+                    <li class="add-border hidden-sm hidden-md hidden-lg"><a id="page6Mobile" runat="server" href="/Pages/AboutUs.aspx">About</a></li>
+                </ul>
+                <%--RIGHT NAV--%>
+                <ul id="rightNav" class="nav navbar-nav navbar-right">
+                    <li class="hidden-xs">
+                        <img id="navStripes" src="/Content/images/NavStripes.png" draggable="false" class="img-responsive" /></li>
+                    <li class="add-border">
+                        <a href="#" data-toggle="modal" data-target="#mdlFrench" class="hidden-xs"><span id="globe" class="glyphicon glyphicon-globe"></span>&nbsp;Fran&ccedil;ais</a>
+                    </li>
+                    <asp:PlaceHolder ID="plhDashboard" runat="server" Visible="false">
+                        <li class="add-border hidden-xs"><a id="page7" runat="server" href="/Pages/Dashboard.aspx"><span class="glyphicon glyphicon-th hidden-xs"></span>&nbsp;Dashboard&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li id="activityTracker" runat="server"><a href="/Pages/ActivityTracker.aspx"><span class="glyphicon glyphicon-stats"></span>&nbsp;ACTIVITY TRACKER</a></li>
+                                <li><a href="/Pages/BudgetPlanner.aspx"><span class="glyphicon glyphicon-usd"></span>&nbsp;BUDGET PLANNER</a></li>
+                                <li><a href="/Pages/EventManager.aspx"><span class="glyphicon glyphicon-calendar"></span>&nbsp;EVENT MANAGER</a></li>
+                                <li id="feedbackMgr" runat="server"><a href="/Pages/FeedbackManager.aspx"><span class="glyphicon glyphicon-send"></span>&nbsp;FEEDBACK MANAGER</a></li>
+                                <li><a href="/Pages/FileManager.aspx"><span class="glyphicon glyphicon-file"></span>&nbsp;FILE MANAGER</a></li>
+                                <li><a href="/Pages/FitBitManagerAuthentication.aspx"><i class="fa fa-bar-chart"></i>&nbsp;FITBIT MANAGER</a></li>
+                                <li id="fitbitMgr" runat="server"><a href="/Pages/FitBitMonitor.aspx"><i class="glyphicon glyphicon-blackboard"></i>&nbsp;FITBIT MONITOR</a></li>
+                                <li id="programMgr" runat="server"><a href="/Pages/ProgramManager.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;PROGRAM MANAGER</a></li>
+                                <li id="slideshowMgr" runat="server"><a href="/Pages/SlideShowManager.aspx"><span class="glyphicon glyphicon-film"></span>&nbsp;SLIDE SHOW MANAGER</a></li>
+                                <li id="userMgr" runat="server"><a href="/Pages/UserManager.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;USER MANAGER</a></li>
+                            </ul>
+                        </li>
+                        <li class="add-border hidden-sm hidden-md hidden-lg"><a id="page7Mobile" runat="server" href="/Pages/Dashboard.aspx"><span class="glyphicon glyphicon-th hidden-xs"></span>&nbsp;Dashboard</a></li>
+                    </asp:PlaceHolder>
+                    <li class="add-border"><a href="#" data-toggle="modal" data-target="#mdlEvents"><i class="fa fa-calendar hidden-xs"></i>&nbsp;Events</a></li>
+                    <li class="add-border"><a href="#" data-toggle="modal" data-target="#mdlInformation"><span style="font-size: 16px;" class="fa fa-info-circle hidden-xs"></span>
+                        <p style="display: inline; font-size: 14px;" class="hidden-lg hidden-md hidden-sm">Information</p>
+                    </a></li>
+                    <asp:PlaceHolder ID="plhLogin" runat="server" Visible="true">
+                        <li class="add-border"><a href="#" id="aLogin" data-toggle="modal" data-target="#mdlLogin"><span class="glyphicon glyphicon-log-in hidden-xs"></span>&nbsp;Login</a></li>
+                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="plhLogout" runat="server" Visible="false">
+                        <li class="add-border hidden-xs">
+                            <asp:LinkButton ID="lbUserName" runat="server" Enabled="false" CausesValidation="False">USERNAME</asp:LinkButton>
+                            <ul class="dropdown-menu text-center hidden-xs">
+                                <li class="add-border hidden-xs"><a href="#" id="btnNotification" data-toggle="modal" data-target="#mdlNotifications"><span class="badge" id="notificationCount" runat="server" style="background-color: #4e3691; margin-left: -3px;">0</span>&nbsp;&nbsp;Notifications</a></li>
+                                <li class="add-border hidden-xs"><a href="/Pages/UserSettings.aspx" id="btnUserSettings"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;User Settings</a></li>
+                                <li class="add-border hidden-xs" id="adminSettings" runat="server"><a href="#" data-toggle="modal" data-target="#mdlSettings"><span class="glyphicon glyphicon-cog hidden-xs"></span>&nbsp;&nbsp;&nbsp;Admin Settings</a></li>
+                                <li class="add-border hidden-xs" id="notificationLog" runat="server"><a href="/Pages/NotificationLog.aspx"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Notification Log</a></li>
+                                <li class="add-border hidden-xs">
+                                    <asp:LinkButton ID="btnLogout" runat="server" CausesValidation="False" OnClick="btnLogout_Click"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="add-border hidden-sm hidden-md hidden-lg"><a href="/Pages/UserSettings.aspx" id="btnUserSettingsMobile"><span class="glyphicon glyphicon-user hidden-xs"></span>&nbsp;User Settings</a></li>
+                        <li class="add-border hidden-sm hidden-md hidden-lg" id="adminSettingsMobile" runat="server"><a href="#" data-toggle="modal" data-target="#mdlSettings"><span class="glyphicon glyphicon-cog hidden-xs"></span>&nbsp;Admin Settings</a></li>
+                        <li class="add-border hidden-sm hidden-md hidden-lg" id="notificationLogMobile" runat="server"><a href="/Pages/NotificationLog.aspx"><span class="glyphicon glyphicon-cog hidden-xs"></span>&nbsp;Notification Log</a></li>
+                        <li class="add-border hidden-sm hidden-md hidden-lg">
+                            <asp:LinkButton ID="btnLogoutMobile" runat="server" CausesValidation="False" OnClick="btnLogout_Click"><span class="glyphicon glyphicon-log-out hidden-xs"></span>&nbsp;Logout</asp:LinkButton>
+                        </li>
+                    </asp:PlaceHolder>
+                </ul>
+            </div>
+        </nav>
+        <div class="banner">
+            <marquee id="bannerMsg" runat="server" behavior="scroll" direction="left" scrollamount="8" style="display: none;"></marquee>
+        </div>
+        <div class="container" id="content">
+            <asp:ContentPlaceHolder ID="Body" runat="server" />
+        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <div runat="server" id="contact">
+                                <h3>Contact Information</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 hidden-lg hidden-md hidden-xs">
+                            <div runat="server" id="hiddenHours">
+                                <h3>Office Hours</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="footer-a">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 id="footer-a-header">Site Map</h3>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-md-4" id="indexList" runat="server">
+                                    <ul>
+                                        <li>
+                                            <h2><a href="/Main.aspx">Index</a></h2>
+                                        </li>
+                                        <li><asp:LinkButton ID="lbLandingPage" runat="server" OnClick="lbLandingPage_Click">Welcome</asp:LinkButton></li>
+                                        <li><a href="/Main.aspx">Home</a></li>
+                                        <li runat="server" id="indexDashLink"><a href="/Pages/Dashboard.aspx">Dashboard</a></li>
+                                        <li><a href="/Pages/Programs.aspx">Programs</a></li>
+                                        <li><a href="/Pages/EducationAndResearch.aspx">Education</a></li>
+                                        <li><a href="/Pages/RehabilitationAndTreatment.aspx">Rehabilitation</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-4 col-md-4" id="dashboardList" runat="server">
+                                    <ul>
+                                        <li>
+                                            <h2><a href="/Pages/Dashboard.aspx">Dashboard</a></h2>
+                                        </li>
+                                        <li id="pgAM" runat="server"><a href="/Pages/ActivityManager.aspx">Activity</a></li>
+                                        <li><a href="/Pages/BudgetPlanner.aspx">Budget</a></li>
+                                        <li><a href="/Pages/EventManager.aspx">Events</a></li>
+                                        <li id="pgFM" runat="server"><a href="/Pages/FeedbackManager.aspx">Feedback</a></li>
+                                        <li><a href="/Pages/FileManager.aspx">Files</a></li>
+                                        <li><a href="/Pages/FitBitManager.aspx">FitBit</a></li>
+                                        <asp:Panel ID="pnlDashHidden" runat="server">
+                                            <li><a href="/Pages/FitBitMonitor.aspx">FitBit Monitor</a></li>
+                                            <li><a href="/Pages/ProgramManager.aspx">Program</a></li>
+                                            <li><a href="/Pages/SlideShowManager.aspx">Slideshow</a></li>
+                                            <li><a href="/Pages/UserManager.aspx">Users</a></li>
+                                        </asp:Panel>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-4 col-md-4" id="aboutList" runat="server">
+                                    <ul>
+                                        <li>
+                                            <h2><a href="/Pages/AboutUs.aspx">About</a></h2>
+                                        </li>
+                                        <li><a href="/Pages/AboutUs.aspx">About HPS</a></li>
+                                        <li><a href="/Pages/ContactUs.aspx">Contact Us</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#mdlFrench">En Fran&ccedil;ais</a></li>
+                                        <li><a href="/Content/files/Hamiton-Program-for-Schizophrenia-Inc.-M-SAA-CMHA-final-Feb171.pdf" target="_blank">MSAA</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3 hidden-sm hidden-xs">
+                            <div runat="server" id="hours">
+                                <h3>Office Hours</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div id="normalCopyright" class="col-xs-12 text-center">
+                            <small>Copyright &copy; 2016 Hamilton Program for Schizophrenia. All Rights Reserved. Designed by Bliss.</small>
+                        </div>
+                    </div>
+                    <!-- MOBILE FOOTER -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h5 id="top"><span class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp;Back To Top</h5>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Contact Information</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse in">
+                                        <div id="contact2" runat="server" class="panel-body contact">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Office Hours</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div id="hours2" runat="server" class="panel-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Index</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                        <ul class="panel-body accordion">
+                                            <li><a href="/Pages/LandingPage.aspx">Welcome</a></li>
+                                            <li><a href="/Main.aspx">Home</a></li>
+                                            <li><a href="/Pages/Dashboard.aspx">Dashboard</a></li>
+                                            <li><a href="/Pages/Programs.aspx">Programs</a></li>
+                                            <li><a href="/Pages/EducationAndResearch.aspx">Education</a></li>
+                                            <li><a href="/Pages/RehabilitationAndTreatment.aspx">Rehabilitation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Dashboard</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse">
+                                        <ul class="panel-body accordion">
+                                            <li id="pgAM_mobile" runat="server"><a href="/Pages/ActivityManager.aspx">Activity</a></li>
+                                            <li><a href="/Pages/BudgetPlanner.aspx">Budget</a></li>
+                                            <li><a href="/Pages/EventManager.aspx">Events</a></li>
+                                            <li id="pgFM_mobile" runat="server"><a href="/Pages/FeedbackManager.aspx">Feedback</a></li>
+                                            <li><a href="/Pages/FileManager.aspx">Files</a></li>
+                                            <li><a href="/Pages/FitBitManager.aspx">FitBit</a></li>
+                                            <asp:Panel ID="pnlDashMobileHidden" runat="server">
+                                                <li><a href="/Pages/FitBitMonitor.aspx">FitBit Monitor</a></li>
+                                                <li><a href="/Pages/ProgramManager.aspx">Program</a></li>
+                                                <li><a href="/Pages/SlideShowManager.aspx">Slideshow</a></li>
+                                                <li><a href="/Pages/UserManager.aspx">Users</a></li>
+                                            </asp:Panel>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title accordion">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">About</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse5" class="panel-collapse collapse">
+                                        <ul class="panel-body accordion">
+                                            <li><a href="/Pages/AboutUs.aspx">About HPS</a></li>
+                                            <li><a href="/Pages/ContactUs.aspx">Contact Us</a></li>
+                                            <li><a href="#" data-toggle="modal" data-target="#mdlFrench">En Fran&ccedil;ais</a></li>
+                                            <li><a href="/Content/files/Hamiton-Program-for-Schizophrenia-Inc.-M-SAA-CMHA-final-Feb171.pdf" target="_blank">MSAA</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-12 text-center">
+                            <h6 id="copyright">Copyright &copy 2016 Hamilton Program for Schizophrenia. All Rights Reserved. Designed by Bliss.</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <%--LOGIN MODAL--%>
+        <div id="mdlLogin" class="modal fade" role="dialog">
+            <div class="modal-dialog  modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login - HPS Dashboard</h4>
+                    </div>
+                    <div class="modal-body">
+                        <asp:UpdatePanel ID="upLogin" runat="server">
+                            <ContentTemplate>
+                                <div class="row" onkeydown="javascript:EnterToClick();">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="txtUsername">Username:</label>
+                                            <asp:RequiredFieldValidator ID="txtUsernameValidator1" CssClass="text-danger" runat="server" ErrorMessage=" Please enter a username" ControlToValidate="txtUsername" ValidationGroup="loginValidate"></asp:RequiredFieldValidator>
+                                            <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" CausesValidation="True"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="txtPassword">Password:</label>
+                                            <asp:RequiredFieldValidator ID="txtPasswordValidator1" CssClass="text-danger" runat="server" ErrorMessage=" Please enter a password" ValidationGroup="loginValidate" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" CausesValidation="True"></asp:TextBox>
+                                        </div>
+<%--                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label for="cbRemember">
+                                                    <asp:CheckBox ID="cbRemember" runat="server" />Remember Me                                                                              
+                                                </label>
+                                            </div>
+                                        </div>--%>
+                                        <asp:Label ID="lblMessage" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                                    </div>
+                                </div>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="btnLogin" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="btnReset" EventName="Click" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <div class="btn-group" role="group">
+                                <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-default" Text="Login" OnClick="btnLogin_Click" ValidationGroup="loginValidate" />
+                                <asp:Button ID="btnReset" runat="server" Text="Reset" CssClass="btn btn-primary" CausesValidation="False" OnClick="btnReset_Click" />
+                                <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-danger" data-dismiss="modal" Text="Cancel" CausesValidation="False" />
+                            </div>
+                            <asp:Button ID="btnForgotPassword" runat="server" CssClass="btn btn-link" Text="Can't access your account?" OnClick="btnForgotPassword_Click" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--CALENDAR MODAL--%>
+        <div id="mdlEvents" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center">Public Events Calendar</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 hidden-xs">
+                                <asp:UpdatePanel ID="upCalendar" runat="server">
+                                    <ContentTemplate>
+                                        <asp:Calendar ID="EventCalendar" runat="server" CssClass="calendar" Font-Bold="False" DayNameFormat="Full" Font-Names="Source Sans Pro" NextMonthText="&amp;gt; &amp;gt;" PrevMonthText="&amp;lt; &amp;lt;" ShowGridLines="True" OnDayRender="EventCalendar_DayRender">
+                                            <DayHeaderStyle CssClass="text-center" Font-Bold="True" />
+                                            <DayStyle CssClass="calendar-day-style" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Height="100px" HorizontalAlign="Left" VerticalAlign="Top" />
+                                        </asp:Calendar>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="EventCalendar" EventName="SelectionChanged" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
+                            <div id="mobilePublicEvents" class="col-xs-12 hidden-sm hidden-md hidden-lg"></div> 
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--FRENCH MODAL--%>
+        <div class="modal fade" id="mdlFrench" tabindex="-1" role="dialog" aria-labelledby="mdlFrench-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="mdlFrench-label">En Fran&ccedil;ais</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Le Programme de schizophrénie de Hamilton (HPS) est un programme global de traitement et de réadaptation en milieu communautaire. Nous aidons les personnes atteintes de schizophrénie par le biais de services de gestion de cas, de programmes de réadaptation et de soins psychiatriques. Nous offrons à nos clients et à leur famille un engagement à long terme et nous les appuyons aussi longtemps qu’ils ont besoin d’aide pour mener une vie enrichissante au sein de la communauté.</p>
+                        <p>En situation de crise, nos psychiatres et nos gestionnaires de cas assurent la prestation de soins directs continus. En cas d’hospitalisation, notre équipe participe au traitement grâce à une collaboration formelle avec le Centre for Mountain Health Services de St. Joseph’s Healthcare.</p>
+                        <p>Notre but est d’aider chaque client à mener une vie saine et enrichissante au sein de la communauté. Pour ce faire, nous offrons un soutien à domicile, au travail et dans les loisirs. Situés au centre-ville de Hamilton, nos locaux sont facilement accessibles par transport en commun.</p>
+                        <p>Nos programmes et services sont offerts en anglais. Toutefois, les services de gestion de cas, de soutien psychiatrique et de réadaptation peuvent être offerts en français avec l’assistance d’un interprète professionnel.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Ferme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--NOTIFICATIONS MODAL--%>
+        <div id="mdlNotifications" class="modal fade" role="dialog">
+            <div class="modal-dialog  modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Notifications</h4>
+                    </div>
+                    <div class="modal-body" id="notifyBody">
+                        <asp:Table ID="tblNotifications" runat="server" CssClass="table table-condensed sortable"></asp:Table>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button id="btnReadAll" type="button" class="btn btn-default">Clear</button>
+                        <button type="button" class="btn btn-default positionNotificationsCloseButton" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--EVENT MODAL--%>
+        <div class="modal fade" id="mdlMasterEventsCalendar" tabindex="-1" role="dialog" aria-labelledby="mdlEvents-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title text-center" id="hdrMasterEventModalTitle" runat="server"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <asp:Label ID="lblMasterEventName" runat="server" Text="Event Name:"></asp:Label>
+                                    <asp:TextBox ID="txtMasterEventName" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblMasterEventDate" runat="server" Text="Date:"></asp:Label>
+                                    <asp:TextBox ID="txtMasterEventDate" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="form-group">
+                                    <asp:Label ID="lblMasterEventTime" runat="server" Text="Time:"></asp:Label>
+                                    <asp:TextBox ID="txtMasterEventTime" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <asp:Label ID="lblMasterEventDescription" runat="server" Text="Description:"></asp:Label>
+                                    <asp:TextBox ID="txtMasterEventDescription" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="10" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class=" text-center">
+                            <button type="button" class="btn btn-default positionNotificationsCloseButton" data-dismiss="modal">Close</button>
+                            <%--                            <asp:Button ID="btnSaveEvent" runat="server" Text="Save" CssClass="btn btn-success" OnClick="btnSaveEvent_Click" Visible="false" />
+                            <asp:Button ID="btnDeleteEvent" runat="server" Text="Delete" CssClass="btn btn-danger" OnClick="btnDeleteEvent_Click" Visible="false" />
+                            <asp:Button ID="btnCreateEvent" runat="server" Text="Create" CssClass="btn btn-primary" OnClick="btnCreateEvent_Click" />
+                            <asp:Button ID="btnCancelEvent" runat="server" Text="Cancel" CssClass="btn btn-default" OnClick="btnCancelEvent_Click" />--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--INFORMATION MODAL--%>
+        <div id="mdlInformation" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-md">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Information</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs nav-justified" id="AssistanceModal_NavTabs">
+                            <li class="active"><a data-toggle="tab" href="#Contact">Contact</a></li>
+                            <li><a data-toggle="tab" href="#Feedback">Feedback</a></li>
+                            <li><a data-toggle="tab" href="#Donations">Donations</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <%--CONTACT TAB--%>
+                            <div id="Contact" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <br />
+                                        <div class="form-group">
+                                            <asp:Label ID="lblContactFirstName" runat="server" Text="First Name:"></asp:Label>
+                                            <asp:TextBox ID="txtContactFirst" runat="server" CssClass="form-control" placeHolder="First Name"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblContactLastName" runat="server" Text="Last Name:"></asp:Label>
+                                            <asp:TextBox ID="txtContactLast" CssClass="form-control" runat="server" placeHolder="Last Name"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblContactEmail" runat="server" Text="Email:"></asp:Label>
+                                            <asp:TextBox ID="txtContactEmail" runat="server" CssClass="form-control" placeHolder="Email"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblContactSubject" runat="server" Text="Subject:"></asp:Label>
+                                            <asp:TextBox ID="txtContactSubject" runat="server" CssClass="form-control" placeHolder="Subject"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblContactMessage" runat="server" Text="Message:"></asp:Label>
+                                            <textarea class="shadow-up-bro" id="tarContactMessage" runat="server" cols="20" rows="2" style="width: 100%" maxlength="250"></textarea>
+                                        </div>
+                                        <asp:Label ID="lblContactFormErrors" runat="server" CssClass="text-danger" Text=""></asp:Label><br />
+                                        <div class="text-center">
+                                            <asp:Button ID="btnContactSend" runat="server" CssClass="btn btn-default" Text="Send" OnClick="btnContactSend_Click" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%--FEEDBACK TAB--%>
+                            <div id="Feedback" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-xs-12 text-center">
+                                        <br />
+                                        <asp:Label ID="Label1" runat="server" Text="How accessible did you find the site?"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <asp:RadioButtonList CssClass="radioButtonList" RepeatDirection="Horizontal" ID="radAccess" runat="server" Style="text-align: center; width: 100%">
+                                            <asp:ListItem GroupName="radAccess" runat="server" Value="1" Text="&nbsp;&nbsp;1<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAccess" runat="server" Value="2" Text="&nbsp;&nbsp;2<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAccess" runat="server" Value="3" Text="&nbsp;&nbsp;3<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" Selected="True" />
+                                            <asp:ListItem GroupName="radAccess" runat="server" Value="4" Text="&nbsp;&nbsp;4<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAccess" runat="server" Value="5" Text="&nbsp;&nbsp;5<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                        </asp:RadioButtonList>
+                                        <br />
+                                        <asp:Label ID="Label2" runat="server" Text="How likely are you to recommend the site?"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <asp:RadioButtonList CssClass="radioButtonList" RepeatDirection="Horizontal" ID="radRec" runat="server" Style="text-align: center; width: 100%">
+                                            <asp:ListItem GroupName="radRec" runat="server" Value="1" Text="&nbsp;&nbsp;1<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radRec" runat="server" Value="2" Text="&nbsp;&nbsp;2<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radRec" runat="server" Value="3" Text="&nbsp;&nbsp;3<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" Selected="True" />
+                                            <asp:ListItem GroupName="radRec" runat="server" Value="4" Text="&nbsp;&nbsp;4<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radRec" runat="server" Value="5" Text="&nbsp;&nbsp;5<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                        </asp:RadioButtonList>
+                                        <br />
+                                        <asp:Label ID="Label3" runat="server" Text="How would you rate the appearance of the site?"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <asp:RadioButtonList CssClass="radioButtonList" RepeatDirection="Horizontal" ID="radAppear" runat="server" Style="text-align: center; width: 100%">
+                                            <asp:ListItem GroupName="radAppear" runat="server" Value="1" Text="&nbsp;&nbsp;1<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAppear" runat="server" Value="2" Text="&nbsp;&nbsp;2<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAppear" runat="server" Value="3" Text="&nbsp;&nbsp;3<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" Selected="True" />
+                                            <asp:ListItem GroupName="radAppear" runat="server" Value="4" Text="&nbsp;&nbsp;4<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radAppear" runat="server" Value="5" Text="&nbsp;&nbsp;5<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;"  />
+                                        </asp:RadioButtonList>
+                                        <br />
+                                        <asp:Label ID="Label4" runat="server" Text="How easy did you find the site to navigate?"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <asp:RadioButtonList CssClass="radioButtonList" RepeatDirection="Horizontal" ID="radNav" runat="server" Style="text-align: center; width: 100%">
+                                            <asp:ListItem GroupName="radNav" runat="server" Value="1" Text="&nbsp;&nbsp;1<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radNav" runat="server" Value="2" Text="&nbsp;&nbsp;2<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radNav" runat="server" Value="3" Text="&nbsp;&nbsp;3<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" Selected="True" />
+                                            <asp:ListItem GroupName="radNav" runat="server" Value="4" Text="&nbsp;&nbsp;4<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;" />
+                                            <asp:ListItem GroupName="radNav" runat="server" Value="5" Text="&nbsp;&nbsp;5<span style='color:#FF9200;' class='glyphicon glyphicon-star'></span>&nbsp;&nbsp;"  />
+                                        </asp:RadioButtonList>
+                                        <br />
+                                        <asp:Label ID="Label5" runat="server" Text="Any additional Comments you have about the site (Optional)"></asp:Label>
+                                        <br />
+                                        <br />
+                                        <textarea class="shadow-up-bro" id="txtComment" runat="server" cols="20" rows="2" style="width: 100%" maxlength="500"></textarea><br />
+                                        <br />
+                                        <asp:DropDownList ID="ddlSiteArea" CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="Overall" Selected="True" Text="Overall"></asp:ListItem>
+                                            <asp:ListItem Text="Contact" Value="Contact"></asp:ListItem>
+                                            <asp:ListItem Text="Education" Value="Education"></asp:ListItem>
+                                            <asp:ListItem Text="About Us" Value="About"></asp:ListItem>
+                                            <asp:ListItem Text="Rehabilitation" Value="Rehabilitation"></asp:ListItem>
+                                            <asp:ListItem Text="Programs" Value="Programs"></asp:ListItem>
+                                            <asp:ListItem Text="Home" Value="Home"></asp:ListItem>
+                                            <asp:ListItem Text="Landing Page" Value="LandingPage"></asp:ListItem>
+                                            <asp:ListItem Text="Dashboard" Value="Dashboard"></asp:ListItem>
+                                            <asp:ListItem Text="User Settings" Value="Settings"></asp:ListItem>
+                                            <asp:ListItem Text="Public Events" Value="PublicEvents"></asp:ListItem>
+                                            <asp:ListItem Value="Other" Text="Other"></asp:ListItem>
+                                        </asp:DropDownList>
+                                        <br />
+                                        <asp:Label ID="lblFeedbackErrors" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                                        <br />
+                                        <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-default" Text="Submit" OnClick="btnSubmit_Click" />
+                                    </div>
+                                </div>
+                            </div>
+                            <%-- DONATIONS --%>
+                            <div id="Donations" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <br />
+                                        <p>
+                                            Donations eligible for a Canadian tax receipt may be made to CSVR Schizophrenia, Inc.
+                                             to support various projects including research initiatives related to schizophrenia,
+                                             and the ongoing development and evaluation of other programs to enrich the lives of those with chronic mental illness.
+                                             Please contact the office for further details.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-default positionNotificationsCloseButton" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--SETTINGS MODAL--%>
+        <div id="mdlSettings" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-md">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Settings</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs nav-justified" id="SettingsModal_NavTabs">
+                            <li class="active"><a data-toggle="tab" href="#ContactInfo">Contact Info</a></li>
+                            <li><a data-toggle="tab" href="#OfficeHours">Office Hours</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <%--CONTACT INFO TAB--%>
+                            <div id="ContactInfo" class="tab-pane fade in active">
+                                <div class="row">
+                                    <br />
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblCompany" runat="server" Text="Company:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtCompany" CssClass="form-control" runat="server" MaxLength="50"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblTelephone" runat="server" Text="Telephone:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtTelephone" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblFax" runat="server" Text="Fax:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtFax" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label ID="lblEmail" runat="server" Text="Email:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" MaxLength="30"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblAddress" runat="server" Text="Address:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtAddress" CssClass="form-control" runat="server" MaxLength="75"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblBanner" runat="server" Text="Banner Message:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtBanner" CssClass="form-control" runat="server" MaxLength="100"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblBannerColor" runat="server" Text="Color:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <div id="pickColor" runat="server" class="input-group colorpicker-component">
+                                                <input id="colorPicker" runat="server" type="text" value="#00AABB" class="form-control" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                            <script>
+                                                $(function () {
+                                                    $('#pickColor').colorpicker();
+                                                });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%-- OFFICE HOURS TAB --%>
+                            <div id="OfficeHours" class="tab-pane fade">
+                                <div class="row">
+                                    <br />
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblMonday" runat="server" Text="Monday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtMonday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblTuesday" runat="server" Text="Tuesday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtTuesday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblWednesday" runat="server" Text="Wednesday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtWednesday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblThursday" runat="server" Text="Thursday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtThursday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblFriday" runat="server" Text="Friday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtFriday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblSaturday" runat="server" Text="Saturday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtSaturday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <div class="form-group">
+                                            <asp:Label ID="lblSunday" runat="server" Text="Sunday:&nbsp;" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtSunday" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <asp:Label ID="lblAdminSettingsErrors" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <asp:Button ID="btnSaveAdminSettings" CssClass="btn btn-default" runat="server" Text="Save" OnClick="btnSaveAdminSettings_Click" />
+                        <button type="button" class="btn btn-default positionNotificationsCloseButton" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+                //$('body').on('mouseleave', '*', function () { $(this).tooltip('hide') });
+            });
+        </script>
+    </form>
+</body>
+</html>

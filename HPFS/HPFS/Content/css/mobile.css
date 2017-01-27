@@ -1,0 +1,133 @@
+﻿/*Include Files*/
+/*Variable Declarations*/
+/*Fonts*/
+/*Variable Declarations*/
+/*Fonts*/
+@media (max-width: 768px) {
+  /*ABOUT US PANELS*/
+  .f1_container {
+    height: 400px; }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav > .open > a {
+    background-color: #7457c1;
+    /*border-radius: 0;
+        -moz-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -moz-transition-property: background-color, color;
+        -o-transition-property: background-color, color;
+        -webkit-transition-property: background-color, color;
+        transition-property: background-color, color;
+        -moz-transition-duration: 0.3s, 0.3s;
+        -o-transition-duration: 0.3s, 0.3s;
+        -webkit-transition-duration: 0.3s, 0.3s;
+        transition-duration: 0.3s, 0.3s;
+        -moz-transition-timing-function: ease, ease;
+        -o-transition-timing-function: ease, ease;
+        -webkit-transition-timing-function: ease, ease;
+        transition-timing-function: ease, ease;
+        -moz-transition-delay: 0s, 0s;
+        -o-transition-delay: 0s, 0s;
+        -webkit-transition-delay: 0s, 0s;
+        transition-delay: 0s, 0s;*/ }
+  /*.navbar-default .navbar-nav > li > a,
+    .navbar-default .navbar-nav > .open > a {
+        border-radius: 0;
+        -moz-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -o-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -webkit-transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+        -moz-transition-property: background-color, color;
+        -o-transition-property: background-color, color;
+        -webkit-transition-property: background-color, color;
+        transition-property: background-color, color;
+        -moz-transition-duration: 0.3s, 0.3s;
+        -o-transition-duration: 0.3s, 0.3s;
+        -webkit-transition-duration: 0.3s, 0.3s;
+        transition-duration: 0.3s, 0.3s;
+        -moz-transition-timing-function: ease, ease;
+        -o-transition-timing-function: ease, ease;
+        -webkit-transition-timing-function: ease, ease;
+        transition-timing-function: ease, ease;
+        -moz-transition-delay: 0s, 0s;
+        -o-transition-delay: 0s, 0s;
+        -webkit-transition-delay: 0s, 0s;
+        transition-delay: 0s, 0s;
+    }*/
+  /*******************************/
+  #content {
+    padding-bottom: 80px; }
+  footer {
+    height: 810px; }
+  .footer-a > div > ul {
+    height: 100%; }
+  #contact, #hours, .footer-a {
+    display: none; }
+  #accordion {
+    display: block; }
+  .accordion a, .accordion li a, #top {
+    display: block;
+    padding: 5px 0; }
+  #top {
+    margin: 10px 18px;
+    padding: 0;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: #8E7CC3;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 35px 0 0 0;
+    padding: 10px 0; }
+  #copyright {
+    color: #0e0e0e;
+    top: 0;
+    margin: 10px auto 8px; }
+  .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 1000px; }
+  .add-border {
+    border-top: 1px solid #1f153a; }
+  #rightNav {
+    margin: 0;
+    padding: 0; }
+  #leftNav {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .navbar-collapse {
+    padding: 0;
+    text-align: center; }
+  .height-adjust-mobile {
+    height: 100% !important; }
+  .folder {
+    padding-bottom: 20px; }
+  .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0; }
+  .nav-justified > li > a {
+    margin-bottom: 0;
+    box-shadow: 0 -2px 5px; }
+  .remove-padding-mobile {
+    padding: 0; }
+  .carousel-max-height {
+    max-height: 150px; }
+  .fix-border-right {
+    border-right: 0; } }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #content {
+    padding-bottom: 80px; }
+  footer {
+    height: 674px;
+    padding-bottom: 650px; }
+  #copyright {
+    padding-top: 20px; } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #content {
+    padding-bottom: 80px; }
+  footer {
+    height: 370px; } }
+

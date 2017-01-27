@@ -1,0 +1,21 @@
+﻿/*Variable Declarations*/
+/*Fonts*/
+/*Variable Declarations*/
+/*Fonts*/
+#RehabilitationPage_NavTabs li.active a {
+  border-radius: 10px 10px 0 0;
+  background-color: #EEE; }
+
+#RehabilitationPage_NavTabs li.active a {
+  color: #333; }
+
+#RehabilitationPage_NavTabs a {
+  border: 1px #AFAFAF solid;
+  border-radius: 10px 10px 0 0;
+  background-color: #4e3691;
+  color: #FFF; }
+
+#RehabilitationPage_NavTabs a:hover {
+  background-color: #1f153a;
+  border: 1px #AFAFAF solid; }
+

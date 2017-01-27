@@ -1,0 +1,62 @@
+﻿[
+  {
+    "outputFile": "Content/css/Project.css",
+    "inputFile": "Content/css/Project.scss"
+  },
+  {
+    "outputFile": "Content/css/Variables.css",
+    "inputFile": "Content/css/Variables.scss"
+  },
+  {
+    "outputFile": "Content/css/Mixins.css",
+    "inputFile": "Content/css/Mixins.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/AboutUs.css",
+    "inputFile": "Content/css/pages/AboutUs.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/Fitbit.css",
+    "inputFile": "Content/css/pages/Fitbit.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/BudgetManager.css",
+    "inputFile": "Content/css/pages/BudgetManager.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/BudgetPlanner.css",
+    "inputFile": "Content/css/pages/BudgetPlanner.scss"
+  },
+  {
+    "outputFile": "Content/css/global/Variables.css",
+    "inputFile": "Content/css/global/Variables.scss"
+  },
+  {
+    "outputFile": "Content/css/global/Mixins.css",
+    "inputFile": "Content/css/global/Mixins.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/EdAndResearch.css",
+    "inputFile": "Content/css/pages/EdAndResearch.scss"
+  },
+  {
+    "outputFile": "Content/css/mobile.css",
+    "inputFile": "Content/css/mobile.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/Rehabilitation.css",
+    "inputFile": "Content/css/pages/Rehabilitation.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/LandingPage.css",
+    "inputFile": "Content/css/pages/LandingPage.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/FitBitMonitor.css",
+    "inputFile": "Content/css/pages/FitBitMonitor.scss"
+  },
+  {
+    "outputFile": "Content/css/pages/ActivityManager.css",
+    "inputFile": "Content/css/pages/ActivityManager.scss"
+  }
+]

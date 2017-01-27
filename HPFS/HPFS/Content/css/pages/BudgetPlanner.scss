@@ -1,0 +1,17 @@
+﻿@import '../global/Variables.scss';
+@import '../global/Mixins.scss';
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color:#F7F7F7 !important;
+}
+#btnSubmitIncome{
+    margin-top:20px;
+}
+#result{
+    padding-top:20px;
+    font-size:2em;
+}
+//Changes certain elements to this class when printing
+.printHide{
+    display:none;
+}

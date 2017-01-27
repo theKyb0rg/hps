@@ -1,0 +1,42 @@
+﻿/*Include Files*/
+@import "../global/Mixins.scss";
+@import "../global/Variables.scss";
+
+.button-border {
+    border: solid 1px black;
+}
+
+img:hover {
+    opacity: .7;
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.table-style {
+    height:261px;
+    border-top: 2px solid #dddddd;
+    overflow: auto;
+}
+
+.makeBlock{
+    display:block;
+    text-align:center;
+}
+
+@include navTabs(#FitBitNavTabs);
+@include navTabs(#distanceInfoTabs);
+@include navTabs(#stepsInfoTabs);
+@include navTabs(#minutesInfoTabs);
+
+.outerFolder{
+    padding: 20px 0;
+}
+
+.innerFolder{
+    padding-bottom: 20px;
+    max-height:323px;
+    overflow:auto;
+}

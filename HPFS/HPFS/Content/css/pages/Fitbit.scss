@@ -1,0 +1,55 @@
+﻿/*FITBIT BUTTONS*/
+@import '../global/Variables.scss';
+@import '../global/Mixins.scss';
+
+.glyphLarge {
+    width: 100%;
+    height: 108.75px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 3px outset white;
+    color: white;
+}
+
+.fourSquare {
+    padding: 4px;
+}
+
+.glyphLarge:active {
+    background-color: $purpleMedium;
+    outline: none !important;
+}
+
+.glyphLarge:focus {
+    outline: none !important;
+}
+
+.glyphLarge span {
+    font-size: 3em;
+    display: block;
+    text-align: center;
+}
+.panel{
+    box-shadow: 5px 5px 25px #888;
+}
+//Bg of ACTIVE tab
+#RehabilitationPage_NavTabs li.active a{
+    border-radius: 10px 10px 0 0;
+    background-color:#EEE;
+}
+//Font Color of ACTIVE tab
+#RehabilitationPage_NavTabs li.active a{
+    color:$fontGrey;
+}
+//Font Color of NON active tabs
+#RehabilitationPage_NavTabs a{
+    border:1px #e3e3e3 solid;
+    border-radius: 10px 10px 0 0;
+    background-color:$purpleMain;
+    color:#FFF;
+}
+//Hover Color of NON active tabs
+#RehabilitationPage_NavTabs a:hover{
+    background-color:$purpleDark;
+    border:1px #e3e3e3 solid;
+}

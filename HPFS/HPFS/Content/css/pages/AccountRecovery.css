@@ -1,0 +1,18 @@
+﻿
+#btnNext, #btnUsernameNext {
+  width: 180px; }
+
+#recPass, #recUser, #recBoth,
+#recCode, #recReset, #recComplete,
+#recDisplay {
+  display: none; }
+
+.recDiv {
+  width: 384px;
+  margin: 0 auto; }
+
+.radRec {
+  padding-left: 10px;
+  font-family: light;
+  font-size: 16px;
+  font-weight: normal; }
